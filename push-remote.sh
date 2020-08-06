@@ -2,6 +2,7 @@
 
 CURDIR=$(pwd)
 
-source ./env.sh
+. ./env.sh
 
-rsync -auv --delete $CURDIR/remote/. ${REMOTE_URL}/.
+echo rsync -auv $CURDIR/remote/. ${REMOTE_URL}/.
+rsync -auv $CURDIR/remote/. ${REMOTE_URL}/.
